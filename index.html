@@ -171,8 +171,8 @@
   </main>
 
   <script>
-    // Change this port if your WebSocket server uses a different one.
-    const socketUrl = `${location.protocol === "https:" ? "wss" : "ws"}://${location.hostname || "localhost"}:8080`;
+    // Use the same host as the webpage, so this works locally and on Render.
+    const socketUrl = `${location.protocol === "https:" ? "wss" : "ws"}://${location.host}`;
     const messages = document.querySelector("#messages");
     const emptyState = document.querySelector("#emptyState");
     const status = document.querySelector("#connectionStatus");
