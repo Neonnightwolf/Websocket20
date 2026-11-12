@@ -1,0 +1,6 @@
+services:
+  - type: web
+    runtime: static
+    name: websocket-chat
+    buildCommand: echo "No build step required"
+    staticPublishPath: .
